@@ -1,17 +1,15 @@
 
 <%- include("partials/header"); -%>
-    <h1><%= startingContent.name %></h1>
+    <h1><%= startingContent.title %></h1>
     <p> <%= startingContent.content %> </p>
 
+  <% posts.forEach(function(post){ %>
 
-  <%  posts.post.forEach(function(post){ %>
-
-    <h1><%=post.name%></h1>
+    <h1><%= post.title %></h1>
     <p>
-    <%=post.content.substring(0, 100) + " ..."%>
-    <a href="/posts/<%=post.title%>">Read More</a>
+    <%= post.content.substring(0, 100) + "..." %>
+    <a href="/posts/<%= post.title %>">Read More</a>
     </p>
-
 
     <% }) %>
 
