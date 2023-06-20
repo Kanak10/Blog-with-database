@@ -65,7 +65,7 @@ app.get("/", (req, res)=>{
         if (err) {
           console.log(err);
         } else {
-          console.log("Content Inserted")
+          console.log("Content Inserted");
         }
       });
       res.redirect("/");
